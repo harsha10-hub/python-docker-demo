@@ -16,3 +16,6 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'docker build -t myimage .'
+- task: CmdLine@2
+  inputs:
+    script: 'docker run -t --name cont-1 -p 1234:8000 myimage'
